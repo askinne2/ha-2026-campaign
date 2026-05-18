@@ -19,9 +19,14 @@ done
 require_in_file index.html '$10,000'
 require_in_file index.html 'Sept 15'
 require_in_file index.html 'assets/images/sda-10-year-white.svg'
-require_in_file campaign-calendar.html 'Production & quiet cultivation'
+require_in_file campaign-calendar.html 'Production &amp; quiet cultivation'
 require_in_file campaign-calendar.html 'Homes for the Holidays'
 require_in_file campaign-strategy.html 'cultivation'
-require_in_file campaign-strategy.html 'June 23'
+require_in_file campaign-strategy.html 'Phase 1'
+require_in_file campaign-strategy.html 'Five phases'
+if grep -qF 'Before & after' campaign-strategy.html; then
+  echo "FAIL: before/after section should be removed"
+  exit 1
+fi
 
 echo "PASS: content verification"
