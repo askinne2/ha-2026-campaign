@@ -16,7 +16,7 @@ for f in index.html campaign-strategy.html campaign-calendar.html; do
   test -f "$f" || { echo "FAIL: missing $f"; exit 1; }
 done
 
-require_in_file index.html '$10,000'
+require_in_file index.html 'Critical Dates'
 require_in_file index.html 'Sept 15'
 require_in_file index.html 'assets/images/sda-10-year-white.svg'
 require_in_file campaign-calendar.html 'Production &amp; quiet cultivation'

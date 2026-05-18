@@ -146,21 +146,40 @@ body {
 }
 
 .hero-section {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: var(--spacing-xl) var(--spacing-md) var(--spacing-lg);
   text-align: center;
 }
 
-.hero-section h1 {
+.hero-logo {
+  display: block;
+  width: min(320px, 85vw);
+  height: auto;
+  margin: 0 auto 20px;
+}
+
+.hero-section .hero-title {
   font-family: var(--font-heading);
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-size: clamp(2rem, 4.5vw, 2.75rem);
+  font-weight: 600;
   color: var(--sda-navy);
   line-height: 1.2;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
+}
+
+.hero-section:has(.hero-logo) .hero-title {
+  color: var(--sda-crimson);
 }
 
 .hero-section .subhead {
+  font-size: var(--text-base);
+  color: var(--sda-crimson);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.hero-section .hero-date {
   font-size: var(--text-base);
   color: var(--sda-crimson);
   font-weight: 600;
