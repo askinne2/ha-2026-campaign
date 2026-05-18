@@ -1,0 +1,7 @@
+{
+  "name": "ha-2026-campaign",
+  "private": true,
+  "scripts": {
+    "verify": "bash tests/verify-content.sh && npx --yes html-validate '*.html' && npx --yes linkinator http://127.0.0.1:8080 --recurse --skip 'https://github.com'"
+  }
+}

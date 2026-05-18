@@ -1,0 +1,100 @@
+.cal-wrap { padding: 1rem 0; font-size: 14px; }
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+  font-size: 12px;
+}
+
+.leg-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  display: inline-block;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.phase {
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  margin-bottom: 12px;
+  overflow: hidden;
+  background: var(--white);
+}
+
+.phase-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  background: var(--bg-light);
+  flex-wrap: wrap;
+}
+
+.phase-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  min-width: 90px;
+}
+
+.phase-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  flex: 1;
+}
+
+.phase-period {
+  font-size: 12px;
+  color: var(--text-light);
+  white-space: nowrap;
+}
+
+.phase-body {
+  padding: 0 16px 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.phase-body.single { grid-template-columns: 1fr; }
+
+.track {
+  border-radius: 6px;
+  padding: 10px 12px;
+}
+
+.track-label {
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.track ul {
+  margin: 0;
+  padding-left: 14px;
+}
+
+.track li {
+  font-size: 12px;
+  color: var(--text-light);
+  margin-bottom: 3px;
+  line-height: 1.5;
+}
+
+.note {
+  font-size: 11px;
+  color: var(--text-light);
+  padding: 6px 16px 12px;
+  font-style: italic;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 640px) {
+  .phase-body { grid-template-columns: 1fr; }
+}
